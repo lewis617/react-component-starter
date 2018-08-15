@@ -45,7 +45,7 @@ module.exports = (env, argv) => {
           }
         },
         {
-          test: /\.less$/,
+          test: /\.(less)|(css)$/,
           use: [
             {
               loader: argv.mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
