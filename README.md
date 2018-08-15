@@ -46,3 +46,20 @@ npm login
 ```sh
 npm publish
 ```
+
+## 调用 React 组件
+
+发布完成后，就可以在调用了。
+
+首先，安装你发布的 React 组件
+
+```sh
+npm i your_react_component --save
+```
+
+然后，在代码中调用：
+
+```js
+import YourReactComponent from 'your_react_component';
+```
+就可以使用了！
