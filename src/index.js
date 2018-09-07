@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './index.less';
+import './Test';
 
 class App extends Component {
   state = {}

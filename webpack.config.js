@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env, argv) => {
   const config = {
-    entry: argv.mode === 'development' ? './demo/index' : './src/index',
+    entry: ['./demo/index', './src/index.less'],
     output: {
       libraryTarget: 'umd',
     },
@@ -48,7 +48,7 @@ module.exports = (env, argv) => {
           test: /\.(less)|(css)$/,
           use: [
             {
-              loader: argv.mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+              loader: MiniCssExtractPlugin.loader,
             }, {
               loader: 'css-loader' // translates CSS into CommonJS
             }, {
